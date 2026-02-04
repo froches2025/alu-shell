@@ -1,2 +1,11 @@
 #!/usr/bin/env bash
-# comment
+# using while and if to display text in a loop conditionally
+count=1
+while [ $count -le 9 ]; do
+	echo "Best School"
+	((count++))
+	if [ $count -eq 9 ]; then
+                echo "Hi"
+		continue
+        fi
+done
