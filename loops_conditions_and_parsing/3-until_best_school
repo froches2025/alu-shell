@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-# comment
+# displaying text 10 times using the until loop
+count=1
+until [ $count -gt 10 ]; do
+	echo "Best School"
+	((count++))
+done
