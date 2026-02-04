@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # using while and if to display text in a loop conditionally
 count=1
-while [ $count -le 9 ]; do
+while [ $count -le 10 ]; do
 	echo "Best School"
 	((count++))
-	if [ $count -eq 9 ]; then
+	if [ $count -eq 10 ]; then
                 echo "Hi"
 		continue
         fi
