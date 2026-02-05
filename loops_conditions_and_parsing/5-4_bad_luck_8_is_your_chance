@@ -1,2 +1,16 @@
 #!/usr/bin/env bash
-# comment
+# looping and displaying text conditionally
+count=1
+while [ $count -le 10 ]; do
+	((count++))
+	if [ $count -eq 5 ]; then
+		echo "bad luck"
+		continue
+	
+	elif [ $count -eq 9 ]; then
+		echo "good luck"
+		continue
+	
+	else echo "Best School"
+	fi
+done	
