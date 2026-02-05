@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-# comment
+# digging deeper in apache logs
+awk '{ count[$1 " " $9]++ }
+	END {
+		for (key in count)
+			print count[key], key
+		}' apache-access.log | sort -nr
