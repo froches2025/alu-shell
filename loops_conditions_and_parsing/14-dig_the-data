@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # digging deeper in apache logs
 awk '{ print $1, $9 }' apache-access.log \
-	| sort \
-	| uniq -c \
-	| sort -nr \
-	| awk '{ print $1, $2. $3 }'
+| sort \
+| uniq -c \
+| sort -nr \
+| awk '{ print $1, $2. $3 }'
