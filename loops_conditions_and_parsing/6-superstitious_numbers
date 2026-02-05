@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-# comment
+# displaying numbers from 1 to 20 and displays text conditionally
+count=1
+while []
