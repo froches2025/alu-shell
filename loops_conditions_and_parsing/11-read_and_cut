@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-# comment
+# reading files in a bash script
+file_path="/etc/passwd"
+
+while IFS=: read -r username _ uid _ _ home _; do
+	echo "$username:$uid:$home"
+done < $file_path
