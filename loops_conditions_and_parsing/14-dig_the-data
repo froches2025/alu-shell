@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # digging deeper in apache logs
-awk '{ count[$1 " " $9]++ }
-	END {
-		for (key in count)
-			print count[key], key
-		}' apache-access.log | sort -nr
+awk '{ print $1, $9 }' apache-access.log \
+	| sort \
+	| uniq -c \
+	| sort -nr \
+	| awk '{ print $1, $2. $3 }'
